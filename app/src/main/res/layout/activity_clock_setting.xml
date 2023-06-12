@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Clock_Setting">
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Time"
+        android:textSize="30sp"
+        android:layout_marginTop="15dp"/>
+
+   <LinearLayout
+       android:id="@+id/linPickers"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="100dp"
+       >
+       <NumberPicker
+           android:id="@+id/PickHour"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginRight="30dp"/>
+       <NumberPicker
+           android:id="@+id/PickMinutes"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"/>
+   </LinearLayout>
+    <LinearLayout
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/linPickers"
+        >
+            <Switch
+                android:id="@+id/repeating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:text="Repeating"
+                android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/typesRepeating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddClock"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/back_btn"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="addClock"/>
+
+
+
+
+</RelativeLayout>
